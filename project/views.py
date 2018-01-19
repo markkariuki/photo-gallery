@@ -4,7 +4,7 @@ import datetime as dt
 
 # Create your views here.
 def Welcome(request):
-    return HttpResponse('welcome to my unsplash project')
+    return render(request, 'welcome.html')
 
 def pictures_today(request):
     date = dt.date.today()
