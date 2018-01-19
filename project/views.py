@@ -1,3 +1,4 @@
+from .models import photos
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
 import datetime as dt
@@ -6,9 +7,9 @@ import datetime as dt
 def Welcome(request):
     return render(request, 'welcome.html')
 
-def pictures_today(request):
-    date = dt.date.today()
-    return render(request, 'all-pics/today-pictures.html', {"date": date,})
+def pictures_of_day(request):
+    project = photos.todays_project()
+    return render(request, 'all-pics/today-pictures.html')
 
 # View Function to present news from past days
 def past_days_pictures(request,past_date):
@@ -26,7 +27,3 @@ def past_days_pictures(request,past_date):
         return redirect(pictures_today)
 
     return render(request, 'all-pics/past-pictures.html', {"date": date})
-
-def pictures_of_day(request):
-    date = dt.date.today()
-    return render(request, 'all-pics/today-pictures.html', {"date": date,})
