@@ -1,0 +1,32 @@
+from django.db import models
+import datetime as dt
+
+
+# Create your models here.
+
+class location(models.Model):
+    name = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.name
+
+class categories(models.Model):
+    name = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.name
+
+class photos(models.Model):
+    image = models.ImageField(upload_to = 'photos/', blank = True)
+    image_name = models.CharField(max_length=30)
+    image_descripton = models.TextField()
+    location_taken = models.ForeignKey(location)
+    image_category = models.ManyToManyField(categories)
+    pub_date = models.DateTimeField(auto_now_add=True)
+
+
+
+    @classmethod
+    def todays_pictures(cls):
+        today = dt.date.today()
+        news = cls.objects.filter(pub_date__date=today)

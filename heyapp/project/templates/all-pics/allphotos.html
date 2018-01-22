@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% block content %}
+
+
+
+    {% for photo_item in photos%}
+    <a href="{% url 'myPhoto' photo.id %}">
+    <div class="box">
+      <div class="boxInner">
+        <img src="{{photo.image.url}}"  class="img-responsive">
+        <div class="titleBox" style="font-family: 'Cabin Sketch', cursive">{{photo.name|upper}}</div>
+      </div>
+    </div>
+    </a>
+    {% endfor %}
+{% endblock %}
