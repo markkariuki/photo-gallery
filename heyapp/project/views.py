@@ -4,12 +4,11 @@ from django.http import HttpResponse
 import datetime as dt
 
 # Create your views here.
-def Welcome(request):
-    return render(request, 'welcome.html')
+
 
 def allphotos(request):
     photos = Photos.objects.all()
-    return render(request, 'allphotos.html', {'photos':photos})
+    return render(request, 'today-pictures.html', {'photos':photos})
 
 # View Function to present news from past days
 def past_days_pictures(request,past_date):
@@ -27,7 +26,7 @@ def past_days_pictures(request,past_date):
         return redirect(pictures_today)
 
     project = photos.days_pictures(date)
-    return render(request, 'all-pics/past-pictures.html', {"date": date})
+    return render(request, 'all-pics/today-pictures.html', {"date": date})
 
 def pictures_today(request):
     date = dt.date.today()

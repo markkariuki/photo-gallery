@@ -1,26 +1,16 @@
-{%extends 'all-pics/base.html'%}
-{% block content %}
-{{ block.super}}
 
-<div class="container">
+{% extends 'all-pics/base.html' %} {% block content %}
 
-  <!-- Looping through pictures   -->
-  {% for pictures_item in news %}
 
-  <div class="row">
-    <!-- displaying News articles -->
-    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-      <h2 class="text-center"> {{ pictures_item.title }} </h2>
+
+    {% for photo_item in photos%}
+    <a href="{% url 'myPhoto' photo.id %}">
+    <div class="box">
+      <div class="boxInner">
+        <img src="{{photo_item.image.url}}"  class="img-responsive">
+        <div class="titleBox" style="font-family: 'Cabin Sketch', cursive">{{photo_item.name|upper}}</div>
+      </div>
     </div>
-
-  </div>
-
-  {% empty %}
-  <div class="row">
-    <h2 class="text-center">ther are no pictures for today</h2>
-  </div>
-  {% endfor %}
-
-</div>
-
+    </a>
+    {% endfor %}
 {% endblock %}

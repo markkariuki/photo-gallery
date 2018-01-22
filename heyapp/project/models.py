@@ -17,7 +17,7 @@ class categories(models.Model):
         return self.name
 
 class photos(models.Model):
-    image = models.ImageField(upload_to = 'photos/', blank = True)
+    image = models.ImageField(upload_to = 'photos/', null = True)
     image_name = models.CharField(max_length=30)
     image_descripton = models.TextField()
     location_taken = models.ForeignKey(location)
@@ -29,4 +29,6 @@ class photos(models.Model):
     @classmethod
     def todays_pictures(cls):
         today = dt.date.today()
-        news = cls.objects.filter(pub_date__date=today)
+        project = cls.objects.filter(pub_date__date=today)
+
+        return project
