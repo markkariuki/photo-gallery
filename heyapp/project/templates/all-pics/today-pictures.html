@@ -3,12 +3,12 @@
 
 
 
-    {% for photo_item in photos%}
-    <a href="{% url 'myPhoto' photo.id %}">
+    {% for photos_item in photos%}
+    <a href="{% url 'myPhoto' photos_item.id %}">
     <div class="box">
       <div class="boxInner">
-        <img src="{{photo_item.image.url}}"  class="img-responsive">
-        <div class="titleBox" style="font-family: 'Cabin Sketch', cursive">{{photo_item.name|upper}}</div>
+        <img src="{{photos_item.image.url}}"  class="img-responsive">
+        <div class="titleBox" style="font-family: 'Cabin Sketch', cursive">{{photos_item.image_name|upper}}</div>
       </div>
     </div>
     </a>
