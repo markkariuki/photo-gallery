@@ -1,0 +1,135 @@
+.home{
+  background-image: url(https://images.unsplash.com/photo-1515415270589-1011c405b23a?auto=format&fit=crop&w=2050&h=673&q=80);
+  height: 100px;
+
+}
+
+.home input-group{
+  margin-top: 48px;
+  position: relative;
+}
+
+body {
+	background: #f2f2f2;
+
+}
+.center {
+	margin: 0 auto;
+	padding: 15px;
+	width: 720px;
+}
+h1 {
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+}
+p {
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+}
+.row {
+	margin-top: 48px;
+}
+.description {
+	margin-top: 24px;
+}
+.description p{
+	text-align: center;
+	font-weight: 400;
+	font-size: 16px;
+}
+
+/*With :after */
+figure.test {
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+	cursor: pointer;
+}
+figure.test img {
+	width: 100%;
+	height: 100%;
+}
+figure.test figcaption {
+	position: absolute;
+	top: 50%;
+	left: 22.5%;
+	right: 22.5%;
+	width: 200px;
+	opacity: 0;
+	z-index: 1;
+	transition: all 0.8s ease-out;
+	transition-delay: 0.2s;
+}
+figure.test:after {
+	display: inline-block;
+	position: absolute;
+	content: "";
+	top: 7%;
+	left: 10%;
+	right: 10%;
+	bottom: 7%;
+	background: white;
+	opacity: 0;
+	transition: all 0.8s ease-out;
+}
+figure.test:hover:after {
+	opacity: 0.9;
+}
+figure.test:hover figcaption {
+	transform: translateY(-50%);
+	opacity: 1;
+}
+
+#rotate {
+	perspective: 500px;
+}
+#rotate:after {
+	transform: rotateX(90deg);
+	transition: all 0.6s ease-in-out;
+}
+#rotate:hover:after {
+	transform: rotateX(0deg);
+}
+#rotate figcaption {
+	transition: all 0.6s ease-in-out;
+	transform: translateY(-50%) rotateX(90deg);
+}
+#rotate:hover figcaption {
+	transform: translateY(-50%) rotateX(0);
+}
+
+/*Without :after*/
+.frame {
+	text-align: center;
+	position: relative;
+	cursor: pointer;
+	perspective: 500px;
+}
+.frame img {
+	width: 100%;
+	height: 100%;
+}
+.frame .details {
+	width: 75%;
+	height: 80%;
+	padding: 5% 10%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotateY(90deg);
+	transform-origin: 50%;
+	background: rgba(255,255,255,0.9);
+	opacity: 0;
+	transition: all 0.4s ease-in;
+
+}
+.frame:hover .details {
+	transform: translate(-50%, -50%) rotateY(0deg);
+	opacity: 1;
+}
+
+/*Effect without Perspective*/
+.frame#wth {
+	perspective: none;
+}

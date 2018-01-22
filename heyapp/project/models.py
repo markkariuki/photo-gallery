@@ -31,4 +31,4 @@ class photos(models.Model):
         today = dt.date.today()
         project = cls.objects.filter(pub_date__date=today)
 
-        return project
+        return pictures_today
