@@ -7,3 +7,7 @@ import datetime as dt
 def pictures_today(request):
     project = photos.objects.all()
     return render(request, 'today-pictures.html', {"photos": project})
+
+def single_photo(request, photo_id):
+    photo = photos.objects.get(id=photo_id)
+    return render(request, 'photos.html', {'photo':photo})

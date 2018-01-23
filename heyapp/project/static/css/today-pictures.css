@@ -1,12 +1,47 @@
 .home{
   background-image: url(https://images.unsplash.com/photo-1515415270589-1011c405b23a?auto=format&fit=crop&w=2050&h=673&q=80);
-  height: 100px;
-
+  height: 700px;
+  background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-color: white;
+	opacity: 0.983 ;
 }
 
-.home input-group{
-  margin-top: 48px;
+.center .col-container {
+    display: table;
+    width: 100%;
+}
+
+.home p{
+	font-size: 50px;
+	text-align: center;
+	padding-top: 200px;
+	font-weight: bold;
+	color: light-blue;
+}
+
+.home h3{
+	font-size: 25px;
+	text-align: center;
+	font-weight: bold;
+}
+.col-container {
+      display: table;
+      width: 100%;
+  }
+  .col {
+      display: table-cell;
+      padding: 56px;
+  }
+
+.center .col {
+    display: table-cell;
+    padding: 16px;
+}
+
+.home .input-group{
   position: relative;
+	padding-top: 20px;
 }
 
 body {
@@ -15,8 +50,9 @@ body {
 }
 .center {
 	margin: 0 auto;
-	padding: 15px;
-	width: 720px;
+	padding: 10px;
+	width: 1000px;
+
 }
 h1 {
 	font-family: 'Lato', sans-serif;
@@ -47,8 +83,8 @@ figure.test {
 	cursor: pointer;
 }
 figure.test img {
-	width: 100%;
-	height: 100%;
+	width: 400px ;
+	height: 400px;
 }
 figure.test figcaption {
 	position: absolute;
@@ -132,4 +168,20 @@ figure.test:hover figcaption {
 /*Effect without Perspective*/
 .frame#wth {
 	perspective: none;
+}
+.wrap{
+  width: 100px;
+  height:300px;
+}
+.wrap img{
+  height: 100px;
+  width: 300px;
+}
+
+ .thumbnail{
+	margin-left: 500px;
+}
+
+.test{
+ margin-left: 500px;
 }

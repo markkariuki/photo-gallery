@@ -5,19 +5,19 @@
  <div class="container">
 
    <div class="row">
-     <img src="{{photos.photos_image.url}}"  class="img-responsive" alt="">
+     <img src="{{photo.image.url}}"  class="img-responsive" alt="">
    </div>
 
    <div class="row">
-     <h1 class="text-center">{{photos_item.image}}</h1>
+     <h1 class="text-center">{{photo.image.url}}</h1>
    </div>
 
    <div class="row">
-     <p>{{photos_item.image_descripton}}</p>
+     <p>{{photo.image_descripton}}</p>
    </div>
 
    <div class="row">
-     <p>Posted {{photos_item.pub_date|timesince}} by {{photos.editor.first_name}}</p>
+     <p>Posted {{photo.pub_date|timesince}} by {{photo.editor.first_name}}</p>
    </div>
 
  </div>
