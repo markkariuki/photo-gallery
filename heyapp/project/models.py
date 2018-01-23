@@ -32,3 +32,9 @@ class photos(models.Model):
         project = cls.objects.filter(pub_date__date=today)
 
         return pictures_today
+
+    @classmethod
+    def search_by_name(cls,search_term):
+        pics = cls.objects.filter(title__icontains=search_term)
+
+        return pics

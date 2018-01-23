@@ -11,3 +11,16 @@ def pictures_today(request):
 def single_photo(request, photo_id):
     photo = photos.objects.get(id=photo_id)
     return render(request, 'photos.html', {'photo':photo})
+
+def search_results(request):
+
+    if 'photos' in request.GET and request.GET["photos"]:
+        search_term = request.GET.get("photo")
+        searched_photos = photos.search_by_name(search_term)
+        message = f"{search_term}"
+
+        return render(request, 'search.html',{"message":message,"photos": searched_photos})
+
+    else:
+        message = "ther is no item here , check your spellings"
+        return render(request, 'search.html',{"message":message})
