@@ -7,6 +7,10 @@
 	opacity: 0.983 ;
 }
 
+body{
+	background-color: black;
+}
+
 .center .col-container {
     display: table;
     width: 100%;
