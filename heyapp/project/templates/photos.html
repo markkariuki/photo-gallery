@@ -1,25 +1,40 @@
 {%extends 'base.html'%}
 
+{% load static %}
+{% load bootstrap3 %}
+
  {% block content %}
 
- <div class="container">
+ {% block styles %}
+   {% bootstrap_css %}
+     <link rel="stylesheet" href="{% static 'css/phots.css' %}">
+   {% endblock %}
+
+ <div class = "col-md-5">
+   <div class = "card">
+      <img src="{{photo.image.url}}"  class="img-responsive" alt="">
+
+ 		<div class = "lower_part">
+ 				<div class = "content">
+
+
+
 
    <div class="row">
-     <img src="{{photo.image.url}}"  class="img-responsive" alt="">
+     <h1 class="text-center">location:   {{photo.location_taken}}</h1>
    </div>
 
    <div class="row">
-     <h1 class="text-center">{{photo.image.url}}</h1>
-   </div>
-
-   <div class="row">
-     <p>{{photo.image_descripton}}</p>
-   </div>
-
-   <div class="row">
-     <p>Posted {{photo.pub_date|timesince}} by {{photo.editor.first_name}}</p>
-   </div>
-
+   <h1 class="text-center">photo name:   {{photo.image_name}}</h1>
  </div>
 
+   <div class="row">
+     <h1  class="text-center"> time posted:  {{photo.pub_date|timesince}}</h1>
+   </div>
+   <a  href="/"	<button type="button" name="button" class="btn btn-danger"> back to home</button></a>
+
+</div>
+</div>
+ </div>
+</div>
  {% endblock %}

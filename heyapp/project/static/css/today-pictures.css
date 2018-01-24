@@ -1,19 +1,24 @@
 .home{
-  background-image: url(https://images.unsplash.com/photo-1515415270589-1011c405b23a?auto=format&fit=crop&w=2050&h=673&q=80);
-  height: 700px;
-  background-attachment: fixed;
+  height: 40px;
+	  background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-color: white;
 	opacity: 0.983 ;
 }
 
 body{
-	background-color: black;
+	background: #8e9eab;
+background: -webkit-linear-gradient(to left, #8e9eab , #eef2f3);
+background: linear-gradient(to left, #8e9eab , #eef2f3);
 }
 
 .center .col-container {
     display: table;
     width: 100%;
+}
+
+.major{
+	padding: 40px;
 }
 
 .home p{
@@ -23,6 +28,7 @@ body{
 	font-weight: bold;
 	color: light-blue;
 }
+
 
 .home h3{
 	font-size: 25px;
@@ -48,13 +54,10 @@ body{
 	padding-top: 20px;
 }
 
-body {
-	background: #f2f2f2;
 
-}
 .center {
 	margin: 0 auto;
-	padding: 10px;
+	padding: 5px;
 	width: 1000px;
 
 }
