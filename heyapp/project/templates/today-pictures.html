@@ -14,27 +14,15 @@
     <link rel="stylesheet" href="{% static 'css/today-pictures.css' %}">
   {% endblock %}
 <body>
-<div class="home">
 
-<div class="jumbotron" style="background-color:grey; width:500px; margin-left:600px; height:500px;">
-<p>My art<br>
+<p style="font-size:30px; text-align:center;">My art<br>
 find the best high qualitypictures here</p>
-</div>
-<div class="input-group">
-  <form class="navbar-form" role="search" action="{% url 'search_results' %}">
+<hr>
 
-  <div class="input-group-btn">
-    <input type="text" class="form-control" placeholder="Search image by name" name="photo" "style="padding:100px;"">
 
-    <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-  </div>
-</div>
-</form>
 
-</div>
-<div class="major">
 <h1 style = "text-align: center">Gallery</h1>
-<hr style="background-color:black;">
+<hr style="background-color:black">
     {% for photos_item in photos %}
 
 
@@ -51,7 +39,7 @@ find the best high qualitypictures here</p>
     </figcaption>
 	</figure>
 </div>
-</div>
+
 </body>
 
 

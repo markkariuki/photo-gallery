@@ -1,15 +1,16 @@
-.home{
-  height: 40px;
-	  background-attachment: fixed;
+.home {
+  height: 7em;
+	 background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-color: white;
 	opacity: 0.983 ;
 }
 
-body{
+body {
 	background: #8e9eab;
 background: -webkit-linear-gradient(to left, #8e9eab , #eef2f3);
 background: linear-gradient(to left, #8e9eab , #eef2f3);
+
 }
 
 .center .col-container {
@@ -18,7 +19,7 @@ background: linear-gradient(to left, #8e9eab , #eef2f3);
 }
 
 .major{
-	padding: 40px;
+	padding: 500px;
 }
 
 .home p{
@@ -57,7 +58,7 @@ background: linear-gradient(to left, #8e9eab , #eef2f3);
 
 .center {
 	margin: 0 auto;
-	padding: 5px;
+	padding: 3px;
 	width: 1000px;
 
 }

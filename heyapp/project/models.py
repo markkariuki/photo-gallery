@@ -34,7 +34,7 @@ class photos(models.Model):
         return pictures_today
 
     @classmethod
-    def search_by_description(cls,search_term):
-        pics = cls.objects.filter(image_descripton__icontains=search_term)
+    def search_by_name(cls,search_term):
+        pics = cls.objects.filter(image_name__icontains=search_term)
 
         return pics
