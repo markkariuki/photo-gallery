@@ -8,10 +8,11 @@
 
   {% if photos %}
     {% for photo in photos %}
-    <a href="{% url 'myPhoto' photo_item.id %}">
 
       <div class="col-sm-6 col-md-3">
           <h1>{{photo.image_name}}</h1>
+          <img src="{{photo.image.url}}"  class="img-responsive" alt="">
+
       </div>
     {% endfor %}
   {% endif %}

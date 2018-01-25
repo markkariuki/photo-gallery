@@ -14,7 +14,7 @@ def single_photo(request, photo_id):
 
 def search_results(request):
 
-    if 'photos' in request.GET and request.GET["photo"]:
+    if 'photo' in request.GET and request.GET["photo"]:
         search_term = request.GET.get("photo")
         searched_photos = photos.search_by_name(search_term)
         message = f"{search_term}"

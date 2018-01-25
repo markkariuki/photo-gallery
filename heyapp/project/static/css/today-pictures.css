@@ -2,7 +2,6 @@
   height: 7em;
 	 background-attachment: fixed;
 	background-repeat: no-repeat;
-	background-color: white;
 	opacity: 0.983 ;
 }
 
@@ -18,9 +17,6 @@ background: linear-gradient(to left, #8e9eab , #eef2f3);
     width: 100%;
 }
 
-.major{
-	padding: 500px;
-}
 
 .home p{
 	font-size: 50px;
