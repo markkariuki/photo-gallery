@@ -15,7 +15,6 @@ MarkupSafe==1.0
 mccabe==0.6.1
 olefile==0.44
 Pillow==4.3.0
-pkg-resources==0.0.0
 psycopg2==2.7.3.2
 pylint==1.7.4
 pyperclip==1.6.0
