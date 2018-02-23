@@ -1,4 +1,4 @@
-{%extends 'base.html'%}
+{% extends 'base.html'%}
 
 {% load static %}
 {% load bootstrap3 %}
@@ -17,7 +17,10 @@
  		<div class = "lower_part">
  				<div class = "content">
 
-
+               <div class="row">
+                 <a href="#" class="btn btn-default ">Copy Image link  &nbsp<i class="glyphicon glyphicon-paperclip"></i>
+                   </a>
+               </div>
 
 
    <div class="row">
@@ -31,6 +34,9 @@
    <div class="row">
      <h1  class="text-center"> time posted:  {{photo.pub_date|timesince}}</h1>
    </div>
+
+
+
    <a  href="/"	<button type="button" name="button" class="btn btn-danger"> back to home</button></a>
 
 </div>
