@@ -12,10 +12,6 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 import os
 from decouple import config
-import dj_database_url
-import dj_database_url
-db_from_env=dj_database_url.config(conn_max_age=500)
-
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -30,7 +26,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=True, cast=bool)
+DEBUG = config('DEBUG', default=False, cast=bool)
 ALLOWED_HOSTS = ['*']
 
 
@@ -91,6 +87,7 @@ DATABASES = {
     }
 }
 
+import dj_database_url
 
 
 db_from_env=dj_database_url.config(conn_max_age=500)
@@ -137,4 +134,10 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-STATICFILES_DIRS = (os.path.join(PROJECT_ROOT, 'static'),)
+STATICFILES_DIRS = (
+os.path.join(PROJECT_ROOT, 'static'),)
+
+
+
+import dj_database_url
+db_from_env=dj_database_url.config(conn_max_age=500)
